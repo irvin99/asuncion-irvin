@@ -9,7 +9,9 @@ Naci en peru el 11 de marzo de 1999 en la ciudad de lima
    * :sparkles: leer por las noches antes de dormir 👽
    * :sparkles: jugar al voley de ves en cuando 👽
 
->mi sueño mas grande siempre ah sido ser piloto de avion
+>*mi sueño mas grande siempre ah sido ser piloto de avion
+>
+>**“Viaja, el dinero se recupera, el tiempo no“**
 >
 >siempre me gusto viajar por todo el mundo conociendo nuevas culturas y costumbres
 
