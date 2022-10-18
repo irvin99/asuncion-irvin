@@ -16,5 +16,5 @@ Naci en peru el 11 de marzo de 1999 en la ciudad de lima
 >siempre me gusto viajar por todo el mundo conociendo nuevas culturas y costumbres
 
 [imagen de dos pilotos de avion](https://images.ecestaticos.com/dVOap8jkq1smwVs1LK6clMTxCAM=/0x0:0x0/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F7e6%2F3dc%2F8c8%2F7e63dc8c86d33c678ad7f557095aa261.jpg)
-
+ 
 ![piloto de avion](https://images.ecestaticos.com/dVOap8jkq1smwVs1LK6clMTxCAM=/0x0:0x0/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F7e6%2F3dc%2F8c8%2F7e63dc8c86d33c678ad7f557095aa261.jpg) 
