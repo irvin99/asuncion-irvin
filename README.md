@@ -1,7 +1,8 @@
 <h1>¿Quien soy?</h1>
 
 <h2> HOLA ME LLAMO IRVIN </h2>  
-Naci en peru el 11 de marzo de 1999 en la ciudad de lima
+Naci en peru el 11 de marzo de 1999 en la ciudad de lima 
+<br> </br>
 
 **Mis hobbies Son**
 
