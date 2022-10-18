@@ -5,9 +5,9 @@ Naci en peru el 11 de marzo de 1999 en la ciudad de lima
 
 **Mis hobbies Son**
 
-   * :sparkles: jugar al futbol en mis tiempos libres 
-   * :sparkles: leer por las noches antes de dormir
-   * :sparkles: jugar al voley de ves en cuando
+   * :sparkles: jugar al futbol en mis tiempos libres 👽
+   * :sparkles: leer por las noches antes de dormir 👽
+   * :sparkles: jugar al voley de ves en cuando 👽
 
 >mi sueño mas grande siempre ah sido ser piloto de avion
 >
