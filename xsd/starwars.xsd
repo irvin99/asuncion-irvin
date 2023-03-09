@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en-en">
+            <date> 08/03/23 </date>
+            <author>irvin asuncion alarcon</author>
+            <utility>base de datos Star Wars</utility>
+            <function>XSD</function>
+        </xs:documentation>
+    </xs:annotation>
+    
+    <xs:simpleType name = "tipotexto">
+        <xs:restriction base = "xs:string">
+            <xs:pattern value = "([A-Z]\w+ ?)(\w+ ?)+" />
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoId">
+        <xs:restriction base="xs:nonNegativeInteger"/>
+    </xs:simpleType>
+    <xs:element name = "starwars" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref = "Asociacion"/>
+                <xs:element ref = "personaje_asociacion" />
+                <xs:element ref = "personaje"/>
+                <xs:element ref = "muerte" />
+                <xs:element ref = "planeta"/>
+                <xs:element ref = "personaje_pelicula" />
+                <xs:element ref = "pelicula"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name = "nombre_Asociacion">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([A-Z](\w+) ?)+"/>
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name = "Asociacion" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "nombre" type="nombre_Asociacion"/>
+            </xs:sequence>
+            <xs:attribute name = "IdAsociacion" use = "required" type = "tipoId" />
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name = "tipoDosDecimales" > 
+        <xs:restriction base = "xs:decimal" > 
+            <xs:fractionDigits value = "2" /> 
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name = "personaje" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "nombre" type="tipotexto"/>
+                <xs:element name = "altura" type="xs:nonNegativeInteger"/>
+                <xs:element name = "peso" type="tipoDosDecimales"/>
+                <xs:element name = "pelo_color" type="tipotexto"/>
+                <xs:element name = "piel_color" type="tipotexto"/>
+                <xs:element name = "ojos_color" type="tipotexto"/>
+                <xs:element name = "nacimiento_anho" type="tipotexto"/>
+                <xs:element name = "genero" type="tipotexto"/>
+                <xs:element name = "creacion_fecha" type="xs:dateTime"/>
+            </xs:sequence>
+            <xs:attribute name = "IdPersonaje" use = "required" type = "tipoId" />
+            <xs:attribute name = "fkPlaneta" use = "required" type = "tipoId" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name = "personaje_asociacion" >
+        <xs:complexType>
+            <xs:attribute name = "fkAsociacion" use = "required" type = "tipoId" />
+            <xs:attribute name = "fkPersonaje" use = "required" type = "tipoId" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name = "muerte" >
+        <xs:complexType>
+            <xs:attribute name = "IdMuerte" use = "required" type = "tipoId" />
+            <xs:attribute name = "fkFallecido" type = "tipoId" />
+            <xs:attribute name = "fkAsesino" type = "tipoId" />
+            <xs:attribute name = "fkPelicula" type = "tipoId" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name = "planeta" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "nombre" type="tipotexto"/>
+                <xs:element name = "rotacionPeriodo" type="xs:positiveInteger"/>
+                <xs:element name = "orbitalPeriodo" type="xs:positiveInteger"/>
+                <xs:element name = "diametro" type="xs:positiveInteger"/>
+                <xs:element name = "clima" type="tipotexto"/>
+                <xs:element name = "gravedad" type="tipotexto"/>
+                <xs:element name = "terreno" type="tipotexto"/>
+                <xs:element name = "superficieAgua" type="tipotexto"/>
+                <xs:element name = "poblacion" type="tipotexto"/>
+                <xs:element name = "creacion_fecha" type="xs:dateTime"/>
+            </xs:sequence>
+            <xs:attribute name = "IdPlaneta" use = "required" type = "tipoId" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name = "personaje_pelicula" >
+        <xs:complexType>
+                <xs:attribute name = "fkPersonaje" use = "required" type = "tipoId" />
+                <xs:attribute name = "fkPelicula" use = "required" type = "tipoId" />
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name = "episodioTex">
+        <xs:restriction base = "xs:string">
+            <xs:pattern value = "([A-Z]\w+ ?)(\w+ ?)+" />
+            <xs:maxLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name = "tituloTex">
+        <xs:restriction base = "xs:string">
+            <xs:pattern value = "([A-Z]\w+ ?)(\w+ ?)+" />
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name = "pelicula" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "episodio" type="episodioTex"/>
+                <xs:element name = "titulo" type="tituloTex"/>
+            </xs:sequence>
+            <xs:attribute name = "IdPelicula" use = "required" type = "tipoId" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,69 @@
+<?xml version = "1.0" encoding = "utf-8" standalone = "no" ?>
+
+<!--
+        documento realizado para la organización de una BBDD de StarWars
+        Author: @irvin asuncion alarcon
+        Fecha: 09/03/2023
+        Editor: Visual Studio Code
+    -->
+    
+<!DOCTYPE starwars SYSTEM "xsd/starwars.xsd">
+
+<starwars>
+    <Asociacion>
+        <IdAsociacion>1</IdAsociacion>
+        <nombre>Las Casas</nombre>
+    </Asociacion>
+    <planeta>
+        <IdPlaneta>1</IdPlaneta>
+        <nombre>La Tierra</nombre>
+        <rotacionPeriodo>35</rotacionPeriodo>
+        <orbitalPeriodo>20</orbitalPeriodo>
+        <diametro>365</diametro>
+        <clima>Seco</clima>
+        <gravedad>Nula</gravedad>
+        <terreno>Árido</terreno>
+        <superficieAgua>3 metros cuadrados</superficieAgua>
+        <poblacion>333333333333333</poblacion>
+        <creacion_fecha>02/02/02</creacion_fecha>
+    </planeta>
+
+    <personaje>
+        <IdPersonaje>1</IdPersonaje>
+        <nombre>L</nombre>
+        <altura>1</altura>
+        <peso>7</peso>
+        <pelo_color>Rubio</pelo_color>
+        <piel_color>Clara</piel_color>
+        <ojos_color>Azules</ojos_color>
+        <nacimiento_anho>19 Enero</nacimiento_anho>
+        <genero>Masculino</genero>
+        <planeta>Marte</planeta>
+        <fkplaneta>1</fkplaneta>
+    </personaje>
+
+    <personajeasociacion>
+        <pkpersonajasociacion>11</pkpersonajasociacion>
+        <fkPersonaje>1</fkPersonaje>
+        <fkAsociacion>1</fkAsociacion>
+    </personajeasociacion>
+
+    <pelicula>
+        <IdPelicula>1</IdPelicula>
+        <episodio>Episodio 8</episodio>
+        <titulo>El Retorno</titulo>
+    </pelicula>
+        
+    <personajepelicula>
+        <fkPersonaje>1</fkPersonaje>
+        <fkPelicula>1</fkPelicula>
+    </personajepelicula>
+
+    <muerte>
+        <IdMuerte>1</IdMuerte>
+        <fkFallecido>1</fkFallecido>
+        <fkAsesino>1</fkAsesino>
+        <fkPelicula>1</fkPelicula>
+    </muerte>
+
+</starwars>
