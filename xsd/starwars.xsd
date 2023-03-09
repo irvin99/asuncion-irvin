@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <xs:annotation>
         <xs:documentation xml:lang="en-en">
-            <date> 08/03/23 </date>
+            <date> 09/03/23 </date>
             <author>irvin asuncion alarcon</author>
             <utility>base de datos Star Wars</utility>
             <function>XSD</function>
